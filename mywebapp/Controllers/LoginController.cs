@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace mywebapp.Controllers
 {
-    [Route("api/[controller]")]
+    [RoutePrefix("api/[controller]")]
     public class LoginController : Controller
     {
         public LoginController() { }
@@ -20,19 +20,26 @@ namespace mywebapp.Controllers
         }
 
         // GET api/login/5
-        [HttpGet("{id}")]
+        [HttpGet("/Login")]
         public ActionResult<string> GetById(int id)
         {
-            return "value" + id;
+            return View(Login);
         }
 
         // POST api/login
-        [HttpPost("")]
-        public void Post([FromBody] string value) { }
+        [ActionName("enter")]
+        [HttpPost("{id}")]
+        public void Post([FromBody] string value) {
+
+            return View("Home");
+         }
 
         // PUT api/login/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value) { }
+        public void Put(int id, [FromBody] string value) {
+
+        
+         }
 
         // DELETE api/login/5
         [HttpDelete("{id}")]
