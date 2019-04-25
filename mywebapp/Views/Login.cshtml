@@ -1,0 +1,41 @@
+@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Log in";
+}
+<div class="loginform"> 
+    <h1>Log in</h1>
+    <form>
+     <br>
+        <input class="in" type="text" id="name" placeholder="User name">
+        <br>
+     <br>
+        <input class="in"type="password" id="pass" placeholder="Password">
+        <br><br>
+        <input id="loginbtn" type="submit" value="Login">
+    </form> 
+</div>  
+
+<style>
+.loginform{
+  text-align: center;   
+}
+.loginform form{
+  background-color:#8bf27d;
+  margin: auto;
+  max-width:20em;
+}
+.in{
+  padding:8px;
+}
+#loginbtn{
+  padding: 8px 30px;
+  font-family:Arial;
+  background-color:#FF8A50;
+  margin-bottom:20px;
+}
+#loginbtn:hover{
+  background-color:#FD5400;
+  color:#FFFFFF;
+}
+</style>
