@@ -2,23 +2,26 @@ using System;
 
 namespace mywebapp.Models{
     
-    public class user{
+    public class User{
         [StringLength(20)]
-        [Required]
-        public string name {get; set;}.
-        
+        [Required(ErrorMessage = "Name is required")]
+        public string Name {get; set;}
+
         [DataType(DataType.Date)]
-        [Required]
-        public DateTime birthday {get; set;}
+        [Required (ErrorMessage = "Birthday is required")]
+        public DateTime Birthday {get; set;}
         
-        [Required]
+
         [RegularExpression(@"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,8}$")]
-        public string password  {get; set;}
+        [Required(ErrorMessage = "Password is required")]
+        public string Password  {get; set;}
         
-        [Required]
         [RegularExpression(@"^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$")]
-        public string email {get; set;}
+        [Required(ErrorMessage = "Email is required")]
+        public string Email {get; set;}
     }
-        public user(){
-        }
+    public user(){
+
+    }
+    
 }
