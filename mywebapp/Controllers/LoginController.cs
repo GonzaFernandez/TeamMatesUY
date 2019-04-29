@@ -1,4 +1,4 @@
-@using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace mywebapp.Controllers
 {
-    [RoutePrefix("api/[controller]")]
+    [RoutePrefix("api/[controller]")]/*<--esto causa error de namespace*/
     public class LoginController : Controller
     {
         public LoginController() { }
