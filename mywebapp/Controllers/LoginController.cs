@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace mywebapp.Controllers
 {
-    [RoutePrefix("api/[controller]")]
+    //[RoutePrefix("api/[controller]")]
     public class LoginController : Controller
     {
         public LoginController() { }
