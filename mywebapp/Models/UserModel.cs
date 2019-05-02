@@ -1,6 +1,7 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
-namespace mywebapp.Models{
+namespace mywebapp1.Models{
     
     public class User{
         [StringLength(20)]
