@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pagina de registro del proyecto TeamMatesUy</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="pagina con respecto a algo que se me va a ocurrir despues">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  </head>
+<body>
+    <head >
+      <h1 class="header">Register new user</h1>
+    </head>
+    <form class="mainForm" asp-action="Register" asp-controller="RegisterUser" method="post">
+      <div class="insideForm">
+       <div class="formField">       
+          <p>Name:</p>   
+          <input type="text" asp-for="FirstName" class="signup-form"/>
+       </div>
+       <div class="formField">
+          <p>Last Name:</p>
+          <input type="text" asp-for="LastName" class="signup-form"/>
+       </div>
+       <div class="formField">
+          <p>Birthday:</p> 
+          <input type="date" asp-for="Birthday" class="signup-form"/>
+         </div>
+       <div class="formField">
+          <p>Email:</p>
+          <input type="email" asp-for="Email" class="signup-form"/>
+       </div class="formField">
+       <div class="formField">
+          <p>Password:</p> 
+          <input type="password" asp-for="Password" class="signup-form"/>
+       </div class="formField">
+       <div class="formField">
+          <p>Repeat your password:</p>
+          <input type="password" asp-for="Password" class="signup-form" />
+       </div class="formField">
+       <div class="formField" id="formFieldButton">
+          <button type="submit">Register</button>
+       </div>
+      </div>
+    </form>
+</body>
+</html>
