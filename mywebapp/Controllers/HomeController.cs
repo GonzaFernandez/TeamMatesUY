@@ -1,41 +1,29 @@
-﻿@using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-//using mywebapp.Models;
+using mywebapp.Models;
 
 namespace mywebapp.Controllers
 {
-    [Route("api/[controller]")]
     public class HomeController : Controller
     {
-        public HomeController() { }
-
-        // GET api/home
-        [HttpGet("")]
-        public ActionResult<IEnumerable<string>> Gets()
+        public IActionResult Index()
         {
-            return new string[] { "value1", "value2" };
+            return View();
         }
 
-        // GET api/home/5
-        [HttpGet("{id}")]
-        public ActionResult<string> GetById(int id)
+        public IActionResult Privacy()
         {
-            return "value" + id;
+            return View();
         }
 
-        // POST api/home
-        [HttpPost("")]
-        public void Post([FromBody] string value) { }
-
-        // PUT api/home/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value) { }
-
-        // DELETE api/home/5
-        [HttpDelete("{id}")]
-        public void DeleteById(int id) { }
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
     }
 }
