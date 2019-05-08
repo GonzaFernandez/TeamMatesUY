@@ -1,0 +1,123 @@
+
+@model RegisterInfo
+
+@{
+    ViewData["Title"] = "Register Page";
+}
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta title="Register">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="~/vendor/jquery-ui/jqueryRegisterPage.min.css">   
+    <link rel="stylesheet" href="~/css/styleRegisterPage.css">
+</head>
+<body>
+    <head >
+      <h1 class="header">Register new user</h1>
+    </head>
+    <form class="mainForm" asp-action="Register" asp-controller="RegisterUser" method="post">
+      <div class="insideForm">
+       <div class="formField">       
+          <p>Name:</p>   
+          <input type="text" asp-for="FirstName" class="signup-form"/>
+       </div>
+       <div class="formField">
+          <p>Last Name:</p>
+          <input type="text" asp-for="LastName" class="signup-form"/>
+       </div>
+       <div class="formField">
+          <p>Birthday:</p> 
+          <input type="date" asp-for="Birthday" class="signup-form" placeholder="Month/Day/Year"/>
+         </div>
+       <div class="formField">
+          <p>Email:</p>
+          <input type="email" asp-for="Email" class="signup-form"/>
+       </div class="formField">
+       <div class="formField">
+          <p>Password:</p> 
+          <input type="password" asp-for="Password" class="signup-form"/>
+       </div class="formField">
+       <div class="formField">
+          <p>Repeat your password:</p>
+          <input type="password" asp-for="Password" class="signup-form" />
+       </div class="formField">
+       <div class="formField" id="formFieldButton">
+          <button type="submit">Register</button>
+       </div>
+      </div>
+    </form>
+</body>
+</html> 
+-->
+<!--
+<form asp-action="Register" asp-controller="RegisterUser" method="post">
+        <p>Name:</p>   
+        <input type="text" asp-for="FirstName" class="signup-form"/>
+        <p>Last Name:</p>   
+        <input type="text" asp-for="LastName" class="signup-form"/>
+        <p>Birthday:</p> 
+        <input type="date" asp-for="Birthday" class="signup-form"/>
+        <p>Email:</p>
+        <input type="email" asp-for="Email" class="signup-form"/> 
+        <p>Password:</p> 
+        <input type="password" asp-for="Password" class="signup-form"/>
+        <p>Repeat your password:</p>
+        <input type="password" asp-for="Password" class="signup-form" />
+        <button type="submit">Register</button>
+</form>
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>pagina de registro</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Pagina de registro">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/RegisterPageStyle.css">
+  </head>
+<body>
+    <head >
+      <h1 class="header">Register new user</h1>
+    </head>
+    <form class="mainForm" asp-action="Register" asp-controller="RegisterUser" method="post">
+      <div class="insideForm">
+       <div class="formField"> 
+          <span asp-validation-for="FirstName"></span>      
+          <p>Name:</p>   
+          <input type="text" asp-for="FirstName" class="inputForm">
+       </div>
+       <div class="formField">
+          <p>Last Name:</p>
+          <input type="text" asp-for="LastName" class="inputForm"/>
+       </div>
+       <div class="formField">
+          <p>Birthday:</p> 
+          <input type="date" asp-for="Birthday" class="inputForm"/>
+       </div>
+       <div class="formField">
+          <p>Email:</p>
+          <input type="email" asp-for="Email" class="inputForm" placeholder="ejemplo@empresa.com"/>
+       </div class="formField">
+       <div class="formField">
+          <p>Password:</p> 
+          <input type="password" asp-for="Password" class="inputForm"/>
+       </div class="formField">
+       <div class="formField">
+          <p>Repeat your password:</p>
+          <input type="password" asp-for="Password" class="inputForm" />
+       </div class="formField">
+       <div class="formFieldButton">
+          <input type="submit" value="Register" class="inputFormButton" />
+       </div>
+      </div>
+    </form>
+</body>
+</html>
+
+
