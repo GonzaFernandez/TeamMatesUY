@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace mywebapp1
+namespace mywebapp
 {
     public class Startup
     {
@@ -57,7 +57,12 @@ namespace mywebapp1
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}"
+                );
+                routes.MapRoute(
+                    name: "Register",
+                    template: "{controller=RegisterUser}/{action=Register}/{id?}"
+                );     
             });
         }
     }
